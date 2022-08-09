@@ -47,10 +47,6 @@ def check_network():#检测网络的连通性
     return True
 
 def get_ip():#获取树莓派的IP
-    #s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-    #s.connect(("1.1.1.1",80))
-    #ip_adress=s.getsockname()[0]
-    #s.close()
     ip_adress = load(urlopen('http://jsonip.com'))['ip']
     #ip_adress = load(urlopen('http://httpbin.org/ip'))['origin']
     #ip_adress = load(urlopen('https://api.ipify.org/?format=json'))['ip']
